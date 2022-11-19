@@ -1,23 +1,32 @@
-import logo from './logo.svg';
+import { useEffect, useState } from "react";
 import './App.css';
+import Header from './components/Layout/Header';
+import NotificationsContainer from './components/Notifications/NotificationsContainer/NotificationsContainer';
 
 function App() {
+  const notificationsFromLocalStorage = JSON.parse(localStorage.getItem('notifications')) || []
+  const [notifications, setNotifications] = useState(notificationsFromLocalStorage)
+
+  useEffect(() => {
+    fetch(`http://localhost:3000/notifications`, {
+      method: "GET",
+    })
+      .then(response => {
+        if (!response.ok) return notifications
+        else return response.json()
+      })
+      .then(notificationsData => setNotifications(notificationsData))
+      .catch(error => alert(error))
+  }, []);
+
+  useEffect(() => {
+    localStorage.setItem('notifications', JSON.stringify(notifications))
+  }, [notifications])
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Header/>
+      <NotificationsContainer notifications={notifications}/>
     </div>
   );
 }
