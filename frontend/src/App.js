@@ -15,7 +15,7 @@ function App() {
         else return response.json()
       })
       .then(notificationsData => setNotifications(notificationsData))
-      .catch(error => alert(error))
+      .catch(error => console.log(error))
   }, []);
 
   useEffect(() => {
