@@ -43,19 +43,26 @@ code {
 
 .notification-description {
   color: black;
-  font-size: 14px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 16px;
+  font-weight: 530;
   margin: 14px;
 }
 
 .button {
   color: white;
   background-color: #8fdd48;
-  font-size: 14px;
-  font-weight: 600;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 15px;
+  font-weight: 550;
   margin: auto;
   padding: 5px 12px;
   width: fit-content;
   border-radius: 25px;
+}
+
+.notification-center > h1 {
+  margin: 32px;
 }
 
 .button:hover {
