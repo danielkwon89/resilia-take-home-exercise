@@ -1,6 +1,6 @@
 const Button = ({text, callback}) => {
     return (
-        <p className={'button'} onClick={callback}>{text}</p>
+        <div className={'button'} onClick={callback}>{text}</div>
     )
 }
 
