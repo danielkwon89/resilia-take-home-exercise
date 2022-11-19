@@ -1,5 +1,4 @@
 import { useEffect, useState } from "react";
-import './App.css';
 import Header from './components/Layout/Header';
 import NotificationsContainer from './components/Notifications/NotificationsContainer/NotificationsContainer';
 
