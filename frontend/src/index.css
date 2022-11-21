@@ -67,6 +67,7 @@ code {
 
 .button:hover {
   opacity: 80%;
+  cursor: default;
 }
 
 @media screen and (max-width: 800px) {
