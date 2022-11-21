@@ -52,11 +52,13 @@ git clone https://github.com/danielkwon89/resilia-take-home-exercise.git
 
 This repository contains a `frontend` and `backend` folders.
 
-Open up **two** terminal instances or tabs.
+Open up **two** terminal tabs.
 
 In the first terminal, `cd` into the `frontend` folder.
 
 In the second terminal, `cd` into the `backend` folder.
+
+---
 
 In the <ins>`backend`</ins> terminal, run the following commands in order:
 
