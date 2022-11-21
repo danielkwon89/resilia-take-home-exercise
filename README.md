@@ -42,3 +42,63 @@ gem install rails
 ```
 
 Finally, you can [follow this link to install `PostgreSQL`](https://www.postgresql.org/download/).
+
+## Running the Project Locally
+Once all the dependencies have been installed, you can clone down the repo:
+
+```
+git clone https://github.com/danielkwon89/resilia-take-home-exercise.git
+```
+
+This repository contains a `frontend` and `backend` folders.
+
+Open up **two** terminal instances or tabs.
+
+In the first terminal, `cd` into the `frontend` folder.
+
+In the second terminal, `cd` into the `backend` folder.
+
+In the <ins>`backend`</ins> terminal, run the following commands in order:
+
+- Install all dependencies
+```
+bundle install
+```
+
+- Create the PostgreSQL database
+```
+rails db:create
+```
+
+- Migrate the database:
+```
+rails db:migrate
+```
+
+- Add seed data into the database
+```
+rails db:seed
+```
+
+- Run the Rails server
+```
+rails s
+```
+
+---
+
+Now in the <ins>`frontend`</ins> terminal, run the following commands in order:
+
+- Install all dependencies
+```
+npm install
+```
+
+- Launch the React server
+```
+npm start
+```
+
+> When you start your `React` server you'll be prompted to use a different port since `localhost:3000` is being used by the `Rails` server.
+
+> Simply press `'y'` in your terminal and your `React` server will run on `localhost:3001`.
